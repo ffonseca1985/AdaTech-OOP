@@ -1,6 +1,8 @@
 class ContaCorrente3 {
 
     protected _cpf: string
+
+    // Esta propriedade só pode ser acessada por classes que herdem esta classe, pois, ela esta protegida
     protected _saldo: number = 0;
 
     protected constructor(cpf: string) {
@@ -11,6 +13,7 @@ class ContaCorrente3 {
         this._saldo += valor
     }
 
+    // Podemos usar o método get para acessar um atributo como se fosse uma propriedade 
     public get saldo() : number {
         return this._saldo;
     }
@@ -26,6 +29,7 @@ class ContaCorrenteItau extends ContaCorrente3 {
         return this._cpf;
     }
     
+     // Podemos usar o metodo set para atribuir valor a um atributo como se fosse uma atribuição direta (*).
     set cpf (value: string) {
 
         let ehValido = this.ehCpfValido(value);
@@ -50,6 +54,10 @@ class ContaCorrenteItau extends ContaCorrente3 {
 let cci = new ContaCorrenteItau("wqweqweqwe");
 
 cci.operar(23);
+
+//(*) Exemplo de atribuição direta
 cci.cpf = "123456";
 
 console.log(cci)
+console.log(cci.saldo)
+console.log(cci.cpf)

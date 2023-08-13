@@ -11,6 +11,7 @@ class ContaCorrente2 {
         this._saldo += valor
     }
 
+    // Podemos usar o metodo get para acessar um atributo como se fosse uma propriedade 
     public get saldo() : number {
         return this._saldo;
     }
@@ -21,3 +22,4 @@ cc2.operar(52)
 cc2.operar(-10)
 
 console.log(cc2);
+console.log(cc2.saldo)
