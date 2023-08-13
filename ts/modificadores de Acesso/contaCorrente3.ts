@@ -21,8 +21,12 @@ class ContaCorrente3 {
 
 class ContaCorrenteItau extends ContaCorrente3 {
 
-    constructor(cpf: string) {
+    // Propriedades criadas com esse modificador devem ser inicializadas na declaração ou no método construtor
+    readonly apelindo: string;
+
+    constructor(cpf: string, apelido : string) {
         super(cpf);
+        this.apelindo = apelido
     }
 
     get cpf() : string {
@@ -51,7 +55,7 @@ class ContaCorrenteItau extends ContaCorrente3 {
     }
 }
 
-let cci = new ContaCorrenteItau("wqweqweqwe");
+let cci = new ContaCorrenteItau("33954258745", "Conta 3");
 
 cci.operar(23);
 
@@ -61,3 +65,4 @@ cci.cpf = "123456";
 console.log(cci)
 console.log(cci.saldo)
 console.log(cci.cpf)
+console.log(cci.apelindo)

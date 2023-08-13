@@ -23,4 +23,12 @@
 
 - Um método "set" é usado para atribuir um valor a um atributo de uma classe. Ele permite que você defina o valor de um atributo como se fosse uma atribuição direta, mas novamente, você tem controle sobre a lógica associada. Isso é útil quando você deseja realizar validações ou aplicar lógica específica ao definir o valor de um atributo.
 
+## Encapsulamento 
+
+- É o conceito de restringir o acesso aos atributos e métodos de uma classe diretamente, seja para leitura ou escrita. No TypeScript, como na maioria das linguagens orientadas a objetos, usamos o identificador private para para restringir esse acesso.
+
+## Atributos Readonly
+
+- Um atributo com o modificador readonly, como o próprio nome sugere, é um atributo de somente leitura. Propriedades criadas com esse modificador devem ser inicializadas na declaração ou no método construtor.
+
 
